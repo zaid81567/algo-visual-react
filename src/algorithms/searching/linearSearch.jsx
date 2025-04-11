@@ -22,7 +22,11 @@ export const linearSearchDraw = (p5) => {
   // p5.textAlign(p5.LEFT , p5.LEFT);
   p5.fill(255);
   p5.text("Linear Searching: "+p5.target, 20,20);
-  p5.fill(255);
+  if(p5.found === false){
+    p5.fill("red");
+  }else{
+    p5.fill("green");
+  }
   p5.text("hasFound: "+p5.found, 20,40);
 
 

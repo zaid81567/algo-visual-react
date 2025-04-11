@@ -1,0 +1,44 @@
+.main-container{
+    display: flex;
+}
+
+.main-left{
+    display: flex;
+    flex-direction: column;
+    width: 610px;
+    border-right: 1px gray solid;
+}
+
+.visual-container{
+    /* height: fit-content; */
+    border-bottom: 1px solid gray;
+}
+
+.description{
+    flex: 1;
+    overflow: auto;
+
+    padding:10px;
+}
+
+/* MAIN RIGHT  */
+.main-right{
+    display: flex;
+    flex-direction: column;
+}
+
+.main-right .header{
+    height: 40px;
+    border-bottom: 1px gray solid;
+    font-size: 20px;
+    padding: 0 10px;
+
+    display: flex;
+    align-items: center;
+}
+
+.main-right .code{
+    flex: 1;
+    padding:10px;
+    overflow: auto;
+}

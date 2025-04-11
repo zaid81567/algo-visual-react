@@ -1,15 +1,18 @@
 import { useState } from 'react'
 import './App.css'
-import P5Wrapper from './comps/P5Wrapper'
-import { linearSearchSetup, linearSearchDraw } from './algorithms/searching/linearSearch'
-
+import Sidebar from './comps/sidebar/Sidebar'
+import MainContainer from './comps/main/MainContainer'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      <P5Wrapper setup={linearSearchSetup} draw={linearSearchDraw} />
+      <div className="main">
+        <div className="sidebar-container">
+          <Sidebar/>
+        </div>
+        <MainContainer/>
+      </div>
     </>
   )
 }
