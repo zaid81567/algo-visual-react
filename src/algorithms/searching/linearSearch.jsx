@@ -38,8 +38,8 @@ export const linearSearchDraw = (p5) => {
     else {
       p5.fill(239);
     }
-
     p5.rect(i * 40 + 10, p5.h_canvas - p5.values[i]*10, 30, p5.values[i]*10);
+
 
     p5.fill(255);
     if(p5.values[i] > 9){

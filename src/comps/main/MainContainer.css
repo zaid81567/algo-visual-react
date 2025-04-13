@@ -9,20 +9,29 @@
     border-right: 1px gray solid;
 }
 
+.main-left .header{
+    height: 40px;
+    border-bottom: 1px gray solid;
+    font-size: 20px;
+    padding: 0 10px;
+
+    display: flex;
+    align-items: center;
+}
+
 .visual-container{
-    /* height: fit-content; */
     border-bottom: 1px solid gray;
 }
 
 .description{
     flex: 1;
     overflow: auto;
-
     padding:10px;
 }
 
 /* MAIN RIGHT  */
 .main-right{
+    flex: 1;
     display: flex;
     flex-direction: column;
 }

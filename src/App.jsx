@@ -4,14 +4,13 @@ import Sidebar from './comps/sidebar/Sidebar'
 import MainContainer from './comps/main/MainContainer'
 
 function App() {
+  const [selectedAlgo, setSelectedAlgo] = useState('linearSearch');
 
   return (
     <>
-      <div className="main">
-        <div className="sidebar-container">
-          <Sidebar/>
-        </div>
-        <MainContainer/>
+      <div className="algo-visual-page">
+        <Sidebar setSelectedAlgo={setSelectedAlgo}/>
+        <MainContainer selectedAlgo={selectedAlgo}/>
       </div>
     </>
   )
