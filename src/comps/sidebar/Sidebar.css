@@ -15,6 +15,12 @@
 
 .sidebar .algo-list li::before{
     content: "# ";
+    color: white;
+}
+
+.sidebar .algo-list li.active::before{
+    content: "# ";
+    color: rgb(255, 0, 0);
 }
 
 .sidebar .algo-list li{
@@ -26,3 +32,7 @@
 .sidebar .algo-list li:hover{
     color:rgb(255, 0, 0);
 }
+
+/* .sidebar .algo-list ul .active{
+    color:rgb(255, 0, 0);
+} */

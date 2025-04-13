@@ -1,7 +1,10 @@
 import React, { useState } from 'react'
 import './Sidebar.css'
+import { ALGORITHMS } from '../../algorithms/algorithmsRegistry';
 
-function Sidebar({setSelectedAlgo}) {
+function Sidebar({selectedAlgo, setSelectedAlgo}) {
+  // map funcs only works on array so converting : object -> array
+  const algos = Object.values(ALGORITHMS);
 
   return (
     <div className="sidebar-container">
@@ -11,9 +14,16 @@ function Sidebar({setSelectedAlgo}) {
           </div>
           <div className="algo-list">
               <ul>
-                  <li onClick= {()=>{setSelectedAlgo('linearSearch');} }>Linear Search</li>
-                  <li onClick= {()=> setSelectedAlgo('binarySearch')}>Binary Search</li>
-                  <li onClick= {()=> setSelectedAlgo('bubbleSort')}>Bubble Sort</li>
+                {algos.map((algo)=>(
+                  <li 
+                    key={algo.key} 
+                    onClick= {()=>{setSelectedAlgo(algo.key);} }
+                    className={selectedAlgo == algo.key?"active":""}
+                  >
+                    {algo.name}
+                  </li>
+                )
+                )}
               </ul>
           </div>
       </div>

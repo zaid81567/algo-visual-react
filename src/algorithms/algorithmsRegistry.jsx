@@ -6,6 +6,7 @@ import { bubbleSortSetup, bubbleSortDraw } from "./sorting/bubbleSort";
 
 export const ALGORITHMS = {
     linearSearch: {
+        key:"linearSearch",
         name: "Linear Search",
         setup: linearSearchSetup,
         draw: linearSearchDraw,
@@ -13,6 +14,7 @@ export const ALGORITHMS = {
         code: "// Linear search implementation... [under work]"
     },
     bubbleSort: {
+        key:"bubbleSort",
         name: "Bubble Sort",
         setup: bubbleSortSetup,
         draw: bubbleSortDraw,

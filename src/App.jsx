@@ -9,7 +9,7 @@ function App() {
   return (
     <>
       <div className="algo-visual-page">
-        <Sidebar setSelectedAlgo={setSelectedAlgo}/>
+        <Sidebar selectedAlgo={selectedAlgo} setSelectedAlgo={setSelectedAlgo}/>
         <MainContainer selectedAlgo={selectedAlgo}/>
       </div>
     </>
