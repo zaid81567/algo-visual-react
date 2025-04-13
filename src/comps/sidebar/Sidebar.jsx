@@ -5,7 +5,7 @@ function Sidebar() {
   return (
     <div className="sidebar">
         <div className="logo">
-            <p>Algo Visual</p>
+            <p>Algo Visual ✨</p>
         </div>
         <div className="algo-list">
             <ul>
