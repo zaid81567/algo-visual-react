@@ -4,6 +4,7 @@ import { binarySearchSetup, binarySearchDraw } from "./searching/binarySearch";
 
 // sorting algos
 import { bubbleSortSetup, bubbleSortDraw } from "./sorting/bubbleSort";
+import { combSortSetup, combSortDraw } from "./sorting/combSort";
 import { selectionSortSetup, selectionSortDraw } from "./sorting/selectionSort";
 import { insertionSortSetup, insertionSortDraw } from "./sorting/insertionSort";
 
@@ -30,6 +31,14 @@ export const ALGORITHMS = {
         name: "Bubble Sort",
         setup: bubbleSortSetup,
         draw: bubbleSortDraw,
+        description: "Repeatedly swaps adjacent elements... [under work]",
+        code: "// Bubble sort implementation... [under work]"
+    },
+    combSort: {
+        key:"combSort",
+        name: "Comb Sort",
+        setup: combSortSetup,
+        draw: combSortDraw,
         description: "Repeatedly swaps adjacent elements... [under work]",
         code: "// Bubble sort implementation... [under work]"
     },
