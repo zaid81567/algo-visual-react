@@ -1,5 +1,5 @@
-//BINARY SEARCH
-export const binarySearchSetup = (p5, canvasParentRef) => {
+//INTERPOLATION SEARCH
+export const interpolationSearchSetup = (p5, canvasParentRef) => {
    if (document.querySelector('canvas')) {
     document.querySelector('canvas').remove();
   }
@@ -9,16 +9,17 @@ export const binarySearchSetup = (p5, canvasParentRef) => {
 
 
   p5.createCanvas(p5.w_canvas, p5.h_canvas).parent(canvasParentRef);
-  p5.values = Array.from({ length: 15 }, () => Math.floor(Math.random() * 12)+1).sort((a,b)=> a - b);
+  p5.values = Array.from({ length: 15 }, () => Math.floor(Math.random() * 25)+1).sort((a,b)=> a - b);
   p5.target = p5.values[Math.floor(Math.random() * p5.values.length)];
   p5.l = 0;
-  p5.r = p5.values.length - 1;
-  p5.mid = (p5.l+p5.r)/2;
+  p5.h = p5.values.length - 1;
+//   lo + (((hi - lo) * (data - arr[lo])) // (arr[hi] - arr[lo]));
+  p5.mid = Math.floor(p5.l + (((p5.h - p5.l) * (p5.target - p5.values[p5.l])) / (p5.values[p5.h] - p5.values[p5.l])));
   p5.found = false;
   p5.frameRate(1); // default is 60fps but now with this we have 2fps, for slowing down the animation
 };
 
-export const binarySearchDraw = (p5) => {
+export const interpolationSearchDraw = (p5) => {
   p5.background(0);
   let accent_green = "#bcfd49";
 
@@ -37,7 +38,7 @@ export const binarySearchDraw = (p5) => {
     if (i == p5.mid) {
       p5.fill(accent_green);
     } 
-    else if(i>= p5.l && i<= p5.r) {
+    else if(i>= p5.l && i<= p5.h) {
       p5.fill("blue");
     }else{
         p5.fill("white")
@@ -61,12 +62,12 @@ export const binarySearchDraw = (p5) => {
   if(p5.target == p5.values[p5.mid]){
     p5.found = true;
     p5.l = p5.mid;
-    p5.r = p5.mid;
+    p5.h = p5.mid;
   }else if(p5.target > p5.values[p5.mid]){
     p5.l = p5.mid+1;
-    p5.mid = (p5.l+p5.r)/2;
+    p5.mid = p5.mid = Math.floor(p5.l + (((p5.h - p5.l) * (p5.target - p5.values[p5.l])) / (p5.values[p5.h] - p5.values[p5.l])));
   }else if(p5.target < p5.values[p5.mid]){
-    p5.r = p5.mid-1;
-    p5.mid = (p5.l+p5.r)/2;
+    p5.h = p5.mid-1;
+    p5.mid = p5.mid = Math.floor(p5.l + (((p5.h - p5.l) * (p5.target - p5.values[p5.l])) / (p5.values[p5.h] - p5.values[p5.l])));
   }
 };

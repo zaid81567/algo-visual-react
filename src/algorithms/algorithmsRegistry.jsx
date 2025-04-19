@@ -1,10 +1,12 @@
 // searching algos
 import { linearSearchSetup, linearSearchDraw } from "./searching/linearSearch";
+import { jumpSearchSetup, jumpSearchDraw } from "./searching/jumpSearch"; // faster version of linear search
 import { binarySearchSetup, binarySearchDraw } from "./searching/binarySearch";
+import { interpolationSearchSetup, interpolationSearchDraw } from "./searching/interpolationSearch"; // faster version of binary search
 
 // sorting algos
 import { bubbleSortSetup, bubbleSortDraw } from "./sorting/bubbleSort";
-import { combSortSetup, combSortDraw } from "./sorting/combSort";
+import { combSortSetup, combSortDraw } from "./sorting/combSort"; // varient of bubble sort
 import { selectionSortSetup, selectionSortDraw } from "./sorting/selectionSort";
 import { insertionSortSetup, insertionSortDraw } from "./sorting/insertionSort";
 
@@ -18,11 +20,27 @@ export const ALGORITHMS = {
         description: "Finds elements by checking each one sequentially...[under work]",
         code: "// Linear search implementation... [under work]"
     },
+    jumpSearch: {
+        key:"jumpSearch",
+        name: "Jump Search",
+        setup: jumpSearchSetup,
+        draw: jumpSearchDraw,
+        description: "Finds elements by checking each one sequentially...[under work]",
+        code: "// Linear search implementation... [under work]"
+    },
     binarySearch: {
         key:"binarySearch",
         name: "Binary Search",
         setup: binarySearchSetup,
         draw: binarySearchDraw,
+        description: "Finds elements by checking each one sequentially...[under work]",
+        code: "// Linear search implementation... [under work]"
+    },
+    interpolationSearch: {
+        key:"interpolationSearch",
+        name: "Interpolation Search",
+        setup: interpolationSearchSetup,
+        draw: interpolationSearchDraw,
         description: "Finds elements by checking each one sequentially...[under work]",
         code: "// Linear search implementation... [under work]"
     },
