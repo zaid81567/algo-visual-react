@@ -20,7 +20,6 @@ export const linearSearchDraw = (p5) => {
   p5.background(0);
   let accent_green = "#bcfd49";
 
-  // p5.textAlign(p5.LEFT , p5.LEFT);
   p5.fill(255);
   p5.text("Linear Searching: "+p5.target, 20,20);
   if(p5.found === false){

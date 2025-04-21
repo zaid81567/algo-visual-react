@@ -1,0 +1,37 @@
+💡 Unique Selling Points (Make It Worthy!)
+1️⃣Comparison Mode - Visualize 2 algorithms side-by-side (e.g., Bubble Sort vs. Quick Sort).
+
+2️⃣ser-Generated Data - Let users input their array (e.g., CSV/randomize).
+
+📌 Avoiding "Directionless" Feeling
+Phase Your Work
+
+Phase 1: Finish all Sorting/Searching algorithms (2 weeks).
+
+Phase 2: Add Sliding Window/Two Pointers (1 week).
+
+Phase 3: Polish UI/UX (1 week).
+
+Focus on Quality
+
+A few well-animated, documented algorithms > 50 rushed ones.
+
+Get Feedback Early
+
+Share a prototype with peers/Reddit for suggestions.
+
+----------------
+also add indecting what is happing currently:
+for ex. in jump sort:
+dividing portions
+performing linear Search
+etc.
+----------------
+ALGOS:
+1. Rabin Carp's String Search
+2. 
+
+
+
+for algorithms reference ::::::
+https://www.tutorialspoint.com/data_structures_algorithms/interpolation_search_algorithm.htm#:~:text=Interpolation%20search%20is%20an%20improved,time%20complexity%20over%20linear%20search.

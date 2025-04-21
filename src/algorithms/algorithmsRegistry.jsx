@@ -3,6 +3,7 @@ import { linearSearchSetup, linearSearchDraw } from "./searching/linearSearch";
 import { jumpSearchSetup, jumpSearchDraw } from "./searching/jumpSearch"; // faster version of linear search
 import { binarySearchSetup, binarySearchDraw } from "./searching/binarySearch";
 import { interpolationSearchSetup, interpolationSearchDraw } from "./searching/interpolationSearch"; // faster version of binary search
+import { exponentialSearchSetup, exponentialSearchDraw } from "./searching/exponentialSearch"; 
 
 // sorting algos
 import { bubbleSortSetup, bubbleSortDraw } from "./sorting/bubbleSort";
@@ -43,6 +44,14 @@ export const ALGORITHMS = {
         draw: interpolationSearchDraw,
         description: "Finds elements by checking each one sequentially...[under work]",
         code: "// Linear search implementation... [under work]"
+    },
+    exponentialSearch: {
+        key:"exponentialSearch",
+        name: "Exponential Search",
+        setup: exponentialSearchSetup,
+        draw: exponentialSearchDraw,
+        description: "Finds elements by checking each one sequentially...[under work]",
+        code: "// Exponential search implementation... [under work]"
     },
     bubbleSort: {
         key:"bubbleSort",
