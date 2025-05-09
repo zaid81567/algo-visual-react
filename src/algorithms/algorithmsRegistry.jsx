@@ -10,9 +10,19 @@ import { bubbleSortSetup, bubbleSortDraw } from "./sorting/bubbleSort";
 import { combSortSetup, combSortDraw } from "./sorting/combSort"; // varient of bubble sort
 import { selectionSortSetup, selectionSortDraw } from "./sorting/selectionSort";
 import { insertionSortSetup, insertionSortDraw } from "./sorting/insertionSort";
+import { cycleSortSetup, cycleSortDraw } from "./sorting/cycleSort";
+import { dnfAlgoSetup, dnfAlgoDraw } from "./sorting/dnfAlgo";
 
+// sliding window algos
+import { maxSumSubArraySetup, maxSumSubArrayDraw } from "./slidingWindow/maxSumSubArray"; // find the maximum sum of a subarray of size k
+
+
+// two pointer
+import { pairWithGivenSumSetup, pairWithGivenSumDraw } from "./twoPointer/pairWithGivenSum";
+import { moveZerosToEndSetup, moveZerosToEndDraw } from "./twoPointer/moveZerosToEnd";
 
 export const ALGORITHMS = {
+    // SEARCHING
     linearSearch: {
         key:"linearSearch",
         name: "Linear Search",
@@ -53,6 +63,7 @@ export const ALGORITHMS = {
         description: "Finds elements by checking each one sequentially...[under work]",
         code: "// Exponential search implementation... [under work]"
     },
+    // SORTING
     bubbleSort: {
         key:"bubbleSort",
         name: "Bubble Sort",
@@ -84,5 +95,47 @@ export const ALGORITHMS = {
         draw: insertionSortDraw,
         description: "Repeatedly swaps min elements... [under work]",
         code: "// Selection sort implementation... [under work]"
+    },
+    cycleSort: {
+        key:"cycleSort",
+        name: "Cycle Sort",
+        setup: cycleSortSetup,
+        draw: cycleSortDraw,
+        description: "Repeatedly swaps min elements... [under work]",
+        code: "// Selection sort implementation... [under work]"
+    },
+    dnfAlgo: {
+        key:"dnfAlgo",
+        name: "DNF Algorithm : [sort - 0s, 1s, 2s]",
+        setup: dnfAlgoSetup,
+        draw: dnfAlgoDraw,
+        description: "Repeatedly swaps min elements... [under work]",
+        code: "// Dnf Algorithm implementation... [under work]"
+    },
+    // SLIDING WINDOW
+    maxSumSubArray: {
+        key:"maxSumSubArray",
+        name: "Max Sum Sub Array",
+        setup: maxSumSubArraySetup,
+        draw: maxSumSubArrayDraw,
+        description: "Finds the maximum sum of a subarray of size k... [under work]",
+        code: "// Max sum subarray implementation... [under work]"
+    },
+    // TWO POINTER
+    pairWithGivenSum:{
+        key:"pairWithGivenSum",
+        name:"Piar With Given Sum",
+        setup: pairWithGivenSumSetup,
+        draw: pairWithGivenSumDraw,
+        description: "Finds the maximum sum of a subarray of size k... [under work]",
+        code: "// Max sum subarray implementation... [under work]"
+    },
+    moveZerosToEnd:{
+        key:"moveZerosToEnd",
+        name:"Move Zeros To End",
+        setup: moveZerosToEndSetup,
+        draw: moveZerosToEndDraw,
+        description: "Finds the maximum sum of a subarray of size k... [under work]",
+        code: "// Max sum subarray implementation... [under work]"
     }
 }

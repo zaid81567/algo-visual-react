@@ -16,14 +16,14 @@ export const insertionSortSetup = (p5, canvasParentRef) => {
   p5.hasSorted = false;
   p5.isInserting = false;
   p5.frameRate(3); // default is 60fps but now with this we have 2fps, for slowing down the animation
-  p5.count = 0;
+  // p5.count = 0;
 };
 
 export const insertionSortDraw = (p5) => {
-    if(p5.count%10 == 0){
-    console.log(p5.count)
-    p5.count++;
-    }
+    // if(p5.count%10 == 0){
+    // console.log(p5.count)
+    // p5.count++;
+    // }
 
   p5.background(0);
   let accent_green = "#bcfd49";

@@ -80,7 +80,6 @@ export const exponentialSearchDraw = (p5) => {
 
 
   // exponential algo - first find range then do binary search
-
   if(!p5.found){
       if (!p5.startBinarySearch && !p5.isFirstIteration){
         if (p5.target ==  p5.values[Math.min(p5.values.length - 1, Math.pow(2, p5.i))]){
