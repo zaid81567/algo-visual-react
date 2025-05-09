@@ -20,6 +20,7 @@ import { maxSumSubArraySetup, maxSumSubArrayDraw } from "./slidingWindow/maxSumS
 // two pointer
 import { pairWithGivenSumSetup, pairWithGivenSumDraw } from "./twoPointer/pairWithGivenSum";
 import { moveZerosToEndSetup, moveZerosToEndDraw } from "./twoPointer/moveZerosToEnd";
+import { reverseArrayUsingTwoPointersSetup, reverseArrayUsingTwoPointersDraw } from "./twoPointer/reverseArrayUsingTwoPointers";
 
 export const ALGORITHMS = {
     // SEARCHING
@@ -135,6 +136,14 @@ export const ALGORITHMS = {
         name:"Move Zeros To End",
         setup: moveZerosToEndSetup,
         draw: moveZerosToEndDraw,
+        description: "Finds the maximum sum of a subarray of size k... [under work]",
+        code: "// Max sum subarray implementation... [under work]"
+    },
+    reverseArrayUsingTwoPointers:{
+        key:"reverseArrayUsingTwoPointers",
+        name:"Reverse Array Using Two Pointers",
+        setup: reverseArrayUsingTwoPointersSetup,
+        draw: reverseArrayUsingTwoPointersDraw,
         description: "Finds the maximum sum of a subarray of size k... [under work]",
         code: "// Max sum subarray implementation... [under work]"
     }
