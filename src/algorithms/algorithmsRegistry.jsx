@@ -22,6 +22,9 @@ import { pairWithGivenSumSetup, pairWithGivenSumDraw } from "./twoPointer/pairWi
 import { moveZerosToEndSetup, moveZerosToEndDraw } from "./twoPointer/moveZerosToEnd";
 import { reverseArrayUsingTwoPointersSetup, reverseArrayUsingTwoPointersDraw } from "./twoPointer/reverseArrayUsingTwoPointers";
 
+// random algos
+import { reverseArrayUsingOnePointerSetup, reverseArrayUsingOnePointerDraw } from "./randomAlgos/reverseArrayUsingOnePointer";
+
 export const ALGORITHMS = {
     // SEARCHING
     linearSearch: {
@@ -144,6 +147,14 @@ export const ALGORITHMS = {
         name:"Reverse Array Using Two Pointers",
         setup: reverseArrayUsingTwoPointersSetup,
         draw: reverseArrayUsingTwoPointersDraw,
+        description: "Finds the maximum sum of a subarray of size k... [under work]",
+        code: "// Max sum subarray implementation... [under work]"
+    },
+    reverseArrayUsingOnePointer:{
+        key:"reverseArrayUsingOnePointer",
+        name:"Reverse Array Using One Pointer",
+        setup: reverseArrayUsingOnePointerSetup,
+        draw: reverseArrayUsingOnePointerDraw,
         description: "Finds the maximum sum of a subarray of size k... [under work]",
         code: "// Max sum subarray implementation... [under work]"
     }
