@@ -1,4 +1,4 @@
-//TWO POINTER - MOVE ZEROS TO END
+// ONE POINTER - REVERSE ARRAY USING ONE POINTER
 export const reverseArrayUsingOnePointerSetup = (p5, canvasParentRef) => {
     if (document.querySelector('canvas')) {
      document.querySelector('canvas').remove();

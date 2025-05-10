@@ -24,6 +24,7 @@ import { reverseArrayUsingTwoPointersSetup, reverseArrayUsingTwoPointersDraw } f
 
 // random algos
 import { reverseArrayUsingOnePointerSetup, reverseArrayUsingOnePointerDraw } from "./randomAlgos/reverseArrayUsingOnePointer";
+import { mergeTwoSortedArraysSetup, mergeTwoSortedArraysDraw } from "./randomAlgos/mergeTwoSortedArrays";
 
 export const ALGORITHMS = {
     // SEARCHING
@@ -150,11 +151,20 @@ export const ALGORITHMS = {
         description: "Finds the maximum sum of a subarray of size k... [under work]",
         code: "// Max sum subarray implementation... [under work]"
     },
+    // RANDOM ALGOS
     reverseArrayUsingOnePointer:{
         key:"reverseArrayUsingOnePointer",
         name:"Reverse Array Using One Pointer",
         setup: reverseArrayUsingOnePointerSetup,
         draw: reverseArrayUsingOnePointerDraw,
+        description: "Finds the maximum sum of a subarray of size k... [under work]",
+        code: "// Max sum subarray implementation... [under work]"
+    },
+    mergeTwoSortedArrays:{
+        key:"mergeTwoSortedArrays",
+        name:"Merge Two Sorted Arrays",
+        setup: mergeTwoSortedArraysSetup,
+        draw: mergeTwoSortedArraysDraw,
         description: "Finds the maximum sum of a subarray of size k... [under work]",
         code: "// Max sum subarray implementation... [under work]"
     }
