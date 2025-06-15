@@ -82,3 +82,68 @@ export const selectionSortDraw = (p5) => {
   }
 
 };
+
+
+// CODE SNIPPET
+export const selectionSortCode= {
+  python: `# Selection Sort
+arr = [5, 3, 1, 9, 2, 0, 4, 8, 7, 6, 11, 10, 12, 1, 2]
+n = len(arr)
+
+for i in range(n - 1):
+    min_index = i
+    for j in range(i + 1, n):
+        if arr[j] < arr[min_index]:
+            min_index = j
+    if min_index != i:
+        arr[i], arr[min_index] = arr[min_index], arr[i]
+
+print("Sorted array:", arr)`,
+
+  javascript: `// Selection Sort
+let arr = [5, 3, 1, 9, 2, 0, 4, 8, 7, 6, 11, 10, 12, 1, 2];
+
+for (let i = 0; i < arr.length - 1; i++) {
+  let minIndex = i;
+  for (let j = i + 1; j < arr.length; j++) {
+    if (arr[j] < arr[minIndex]) {
+      minIndex = j;
+    }
+  }
+  if (minIndex !== i) {
+    [arr[i], arr[minIndex]] = [arr[minIndex], arr[i]];
+  }
+}
+
+console.log("Sorted array:", arr);`,
+
+  c: `// Selection Sort
+#include <stdio.h>
+
+int main() {
+  int arr[] = {5, 3, 1, 9, 2, 0, 4, 8, 7, 6, 11, 10, 12, 1, 2};
+  int n = sizeof(arr)/sizeof(arr[0]);
+
+  for (int i = 0; i < n - 1; i++) {
+    int min_index = i;
+    for (int j = i + 1; j < n; j++) {
+      if (arr[j] < arr[min_index]) {
+        min_index = j;
+      }
+    }
+    if (min_index != i) {
+      int temp = arr[i];
+      arr[i] = arr[min_index];
+      arr[min_index] = temp;
+    }
+  }
+
+  printf("Sorted array: ");
+  for (int i = 0; i < n; i++) {
+    printf("%d ", arr[i]);
+  }
+  printf("\\n");
+
+  return 0;
+}`
+}

@@ -68,3 +68,75 @@ export const bubbleSortDraw = (p5) => {
   }
 
 };
+
+// CODE SNIPPET
+export const bubbleSortCodeSnippet = {
+  python: `# Bubble Sort
+arr = [5, 1, 4, 2, 8, 0, 2]
+n = len(arr)
+hasSorted = False
+
+for i in range(n - 1):
+    didSwap = False
+    for j in range(n - i - 1):
+        if arr[j] > arr[j + 1]:
+            arr[j], arr[j + 1] = arr[j + 1], arr[j]
+            didSwap = True
+    if not didSwap:
+        hasSorted = True
+        break
+
+print("Sorted array:", arr)`,
+
+  javascript: `// Bubble Sort
+let arr = [5, 1, 4, 2, 8, 0, 2];
+let hasSorted = false;
+
+for (let i = 0; i < arr.length - 1; i++) {
+  let didSwap = false;
+  for (let j = 0; j < arr.length - i - 1; j++) {
+    if (arr[j] > arr[j + 1]) {
+      [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
+      didSwap = true;
+    }
+  }
+  if (!didSwap) {
+    hasSorted = true;
+    break;
+  }
+}
+
+console.log("Sorted array:", arr);`,
+
+  c: `// Bubble Sort
+#include <stdio.h>
+
+int main() {
+  int arr[] = {5, 1, 4, 2, 8, 0, 2};
+  int n = sizeof(arr) / sizeof(arr[0]);
+  int hasSorted = 0;
+
+  for (int i = 0; i < n - 1; i++) {
+    int didSwap = 0;
+    for (int j = 0; j < n - i - 1; j++) {
+      if (arr[j] > arr[j + 1]) {
+        int temp = arr[j];
+        arr[j] = arr[j + 1];
+        arr[j + 1] = temp;
+        didSwap = 1;
+      }
+    }
+    if (!didSwap) {
+      hasSorted = 1;
+      break;
+    }
+  }
+
+  printf("Sorted array: ");
+  for (int i = 0; i < n; i++) {
+    printf("%d ", arr[i]);
+  }
+  printf("\\n");
+  return 0;
+}`
+}

@@ -84,3 +84,56 @@ export const reverseArrayUsingOnePointerSetup = (p5, canvasParentRef) => {
  
  };
  
+
+ // CODE SNIPPET
+export const reverseArrayUsingOnePointerCode = {
+  python: `# Reverse array using one pointer
+arr = [1, 2, 3, 4, 5]
+n = len(arr)
+reversed_arr = [None] * n
+
+pointer = n - 1
+
+for i in range(n):
+    reversed_arr[i] = arr[pointer]
+    pointer -= 1
+
+print("Reversed:", reversed_arr)`,
+  
+  javascript: `// Reverse array using one pointer
+let arr = [1, 2, 3, 4, 5];
+let n = arr.length;
+let reversedArr = new Array(n);
+
+let pointer = n - 1;
+
+for (let i = 0; i < n; i++) {
+  reversedArr[i] = arr[pointer];
+  pointer--;
+}
+
+console.log("Reversed:", reversedArr);`,
+
+  c: `// Reverse array using one pointer
+#include <stdio.h>
+
+int main() {
+  int arr[] = {1, 2, 3, 4, 5};
+  int n = sizeof(arr)/sizeof(arr[0]);
+  int reversedArr[n];
+
+  int pointer = n - 1;
+
+  for (int i = 0; i < n; i++) {
+    reversedArr[i] = arr[pointer];
+    pointer--;
+  }
+
+  printf("Reversed: ");
+  for (int i = 0; i < n; i++) {
+    printf("%d ", reversedArr[i]);
+  }
+
+  return 0;
+}`
+}

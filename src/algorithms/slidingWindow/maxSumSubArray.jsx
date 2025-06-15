@@ -27,7 +27,7 @@ export const maxSumSubArrayDraw = (p5) => {
     if (i >= p5.i && i < p5.i + p5.k) {
       p5.fill("orange");
     } else if (i >= p5.bestStart && i < p5.bestStart + p5.k) {
-      p5.fill("green");
+      p5.fill(accent_green);
     } else {
       p5.fill(255);
     }
@@ -52,3 +52,69 @@ export const maxSumSubArrayDraw = (p5) => {
     p5.i++;
   }
 };
+
+
+// CODE SNIPPET
+export const maxSumSubArrayCode = {
+  python: `# Sliding Window Maximum Sum Subarray of size k
+arr = [3, 7, 1, 8, 4, 10, 2, 5, 9, 6, 11, 12, 0, 13, 14]
+k = 5
+max_sum = 0
+best_start = 0
+
+for i in range(len(arr) - k + 1):
+    current_sum = sum(arr[i:i+k])
+    if current_sum > max_sum:
+        max_sum = current_sum
+        best_start = i
+
+print("Max Sum:", max_sum, "Subarray:", arr[best_start:best_start+k])`,
+
+  javascript: `// Sliding Window Maximum Sum Subarray of size k
+let arr = [3, 7, 1, 8, 4, 10, 2, 5, 9, 6, 11, 12, 0, 13, 14];
+let k = 5;
+let maxSum = 0;
+let bestStart = 0;
+
+for (let i = 0; i <= arr.length - k; i++) {
+  let currentSum = 0;
+  for (let j = i; j < i + k; j++) {
+    currentSum += arr[j];
+  }
+  if (currentSum > maxSum) {
+    maxSum = currentSum;
+    bestStart = i;
+  }
+}
+
+console.log("Max Sum:", maxSum, "Subarray:", arr.slice(bestStart, bestStart + k));`,
+
+  c: `// Sliding Window Maximum Sum Subarray of size k
+#include <stdio.h>
+
+int main() {
+  int arr[] = {3, 7, 1, 8, 4, 10, 2, 5, 9, 6, 11, 12, 0, 13, 14};
+  int n = sizeof(arr) / sizeof(arr[0]);
+  int k = 5;
+  int maxSum = 0, currentSum, bestStart = 0;
+
+  for (int i = 0; i <= n - k; i++) {
+    currentSum = 0;
+    for (int j = i; j < i + k; j++) {
+      currentSum += arr[j];
+    }
+    if (currentSum > maxSum) {
+      maxSum = currentSum;
+      bestStart = i;
+    }
+  }
+
+  printf("Max Sum: %d\\nSubarray: ", maxSum);
+  for (int i = bestStart; i < bestStart + k; i++) {
+    printf("%d ", arr[i]);
+  }
+  printf("\\n");
+
+  return 0;
+}`
+}

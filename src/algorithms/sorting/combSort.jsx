@@ -81,3 +81,77 @@ export const combSortDraw = (p5) => {
   }
 
 };
+
+// CODE SNIPPET
+export const combSortCodeSnippet = {
+  python: `# Comb Sort
+arr = [5, 2, 9, 1, 5, 6, 7, 8, 0, 3, 4, 11, 13, 12, 10]
+shrink_factor = 1.3
+gap = len(arr)
+did_swapped = True
+
+while gap > 1 or did_swapped:
+    gap = max(1, int(gap // shrink_factor))
+    did_swapped = False
+
+    for i in range(len(arr) - gap):
+        if arr[i] > arr[i + gap]:
+            arr[i], arr[i + gap] = arr[i + gap], arr[i]
+            did_swapped = True
+
+print("Sorted array:", arr)`,
+
+  javascript: `// Comb Sort
+let arr = [5, 2, 9, 1, 5, 6, 7, 8, 0, 3, 4, 11, 13, 12, 10];
+let shrinkFactor = 1.3;
+let gap = arr.length;
+let didSwapped = true;
+
+while (gap > 1 || didSwapped) {
+  gap = Math.floor(gap / shrinkFactor);
+  if (gap < 1) gap = 1;
+  didSwapped = false;
+
+  for (let i = 0; i + gap < arr.length; i++) {
+    if (arr[i] > arr[i + gap]) {
+      [arr[i], arr[i + gap]] = [arr[i + gap], arr[i]];
+      didSwapped = true;
+    }
+  }
+}
+
+console.log("Sorted array:", arr);`,
+
+  c: `// Comb Sort
+#include <stdio.h>
+
+int main() {
+  int arr[] = {5, 2, 9, 1, 5, 6, 7, 8, 0, 3, 4, 11, 13, 12, 10};
+  int n = sizeof(arr)/sizeof(arr[0]);
+  float shrink_factor = 1.3;
+  int gap = n;
+  int didSwapped = 1;
+
+  while (gap > 1 || didSwapped) {
+    gap = (int)(gap / shrink_factor);
+    if (gap < 1) gap = 1;
+    didSwapped = 0;
+
+    for (int i = 0; i + gap < n; i++) {
+      if (arr[i] > arr[i + gap]) {
+        int temp = arr[i];
+        arr[i] = arr[i + gap];
+        arr[i + gap] = temp;
+        didSwapped = 1;
+      }
+    }
+  }
+
+  printf("Sorted array: ");
+  for (int i = 0; i < n; i++) {
+    printf("%d ", arr[i]);
+  }
+  printf("\\n");
+  return 0;
+}`
+}

@@ -98,3 +98,68 @@ export const reverseArrayUsingTwoPointersSetup = (p5, canvasParentRef) => {
  
  };
  
+
+ // CODE SNIPPET
+
+ export const reverseArrayUsingTwoPointersCode = {
+  python: `# Reverse Array Using Two Pointers
+arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+reversed_arr = [None] * len(arr)
+p1 = 0
+p2 = len(arr) - 1
+
+while p1 <= p2:
+    reversed_arr[p1] = arr[p2]
+    reversed_arr[p2] = arr[p1]
+    p1 += 1
+    p2 -= 1
+
+print("Original:", arr)
+print("Reversed:", reversed_arr)`,
+
+  javascript: `// Reverse Array Using Two Pointers
+let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let reversedArr = new Array(arr.length).fill(undefined);
+let p1 = 0;
+let p2 = arr.length - 1;
+
+while (p1 <= p2) {
+  reversedArr[p1] = arr[p2];
+  reversedArr[p2] = arr[p1];
+  p1++;
+  p2--;
+}
+
+console.log("Original:", arr);
+console.log("Reversed:", reversedArr);`,
+
+  c: `// Reverse Array Using Two Pointers
+#include <stdio.h>
+
+int main() {
+  int arr[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+  int n = sizeof(arr) / sizeof(arr[0]);
+  int reversedArr[n];
+  int p1 = 0, p2 = n - 1;
+
+  while (p1 <= p2) {
+    reversedArr[p1] = arr[p2];
+    reversedArr[p2] = arr[p1];
+    p1++;
+    p2--;
+  }
+
+  printf("Original: ");
+  for (int i = 0; i < n; i++) {
+    printf("%d ", arr[i]);
+  }
+
+  printf("\\nReversed: ");
+  for (int i = 0; i < n; i++) {
+    printf("%d ", reversedArr[i]);
+  }
+  printf("\\n");
+
+  return 0;
+}`
+}

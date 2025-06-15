@@ -70,3 +70,121 @@ export const cycleSortDraw = (p5) => {
   }
 
 };
+
+
+// CODE SNIPPET
+export const cycleSortCodeSnippet = {
+  python: `# Cycle Sort
+arr = [5, 3, 2, 1, 4, 3, 2, 1, 5, 6, 0, 7, 8, 9, 2]
+n = len(arr)
+
+for cycle_start in range(0, n - 1):
+    item = arr[cycle_start]
+    pos = cycle_start
+
+    for i in range(cycle_start + 1, n):
+        if arr[i] < item:
+            pos += 1
+
+    if pos == cycle_start:
+        continue
+
+    while item == arr[pos]:
+        pos += 1
+
+    arr[pos], item = item, arr[pos]
+
+    while pos != cycle_start:
+        pos = cycle_start
+        for i in range(cycle_start + 1, n):
+            if arr[i] < item:
+                pos += 1
+
+        while item == arr[pos]:
+            pos += 1
+
+        arr[pos], item = item, arr[pos]
+
+print("Sorted array:", arr)`,
+
+  javascript: `// Cycle Sort
+let arr = [5, 3, 2, 1, 4, 3, 2, 1, 5, 6, 0, 7, 8, 9, 2];
+let n = arr.length;
+
+for (let cycleStart = 0; cycleStart < n - 1; cycleStart++) {
+  let item = arr[cycleStart];
+  let pos = cycleStart;
+
+  for (let i = cycleStart + 1; i < n; i++) {
+    if (arr[i] < item) pos++;
+  }
+
+  if (pos === cycleStart) continue;
+
+  while (item === arr[pos]) pos++;
+  [arr[pos], item] = [item, arr[pos]];
+
+  while (pos !== cycleStart) {
+    pos = cycleStart;
+    for (let i = cycleStart + 1; i < n; i++) {
+      if (arr[i] < item) pos++;
+    }
+
+    while (item === arr[pos]) pos++;
+    [arr[pos], item] = [item, arr[pos]];
+  }
+}
+
+console.log("Sorted array:", arr);`,
+
+  c: `// Cycle Sort
+#include <stdio.h>
+
+int main() {
+  int arr[] = {5, 3, 2, 1, 4, 3, 2, 1, 5, 6, 0, 7, 8, 9, 2};
+  int n = sizeof(arr)/sizeof(arr[0]);
+
+  for (int cycle_start = 0; cycle_start < n - 1; cycle_start++) {
+    int item = arr[cycle_start];
+    int pos = cycle_start;
+
+    for (int i = cycle_start + 1; i < n; i++) {
+      if (arr[i] < item)
+        pos++;
+    }
+
+    if (pos == cycle_start)
+      continue;
+
+    while (item == arr[pos])
+      pos++;
+
+    int temp = arr[pos];
+    arr[pos] = item;
+    item = temp;
+
+    while (pos != cycle_start) {
+      pos = cycle_start;
+      for (int i = cycle_start + 1; i < n; i++) {
+        if (arr[i] < item)
+          pos++;
+      }
+
+      while (item == arr[pos])
+        pos++;
+
+      temp = arr[pos];
+      arr[pos] = item;
+      item = temp;
+    }
+  }
+
+  printf("Sorted array: ");
+  for (int i = 0; i < n; i++) {
+    printf("%d ", arr[i]);
+  }
+  printf("\\n");
+
+  return 0;
+}`
+}

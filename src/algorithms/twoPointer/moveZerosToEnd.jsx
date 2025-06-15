@@ -72,3 +72,71 @@ export const moveZerosToEndDraw = (p5) => {
   }
 
 };
+
+
+// CODE SNIPPET
+export const moveZerosToEndCode = {
+  python: `# Move Zeros to End (Two Pointer)
+arr = [0, 1, 0, 3, 0, 2, 4, 0, 1, 0, 0, 3, 2, 0, 1]
+p1 = 0
+p2 = len(arr) - 1
+
+while p1 < p2:
+    if arr[p1] == 0 and arr[p2] != 0:
+        arr[p1], arr[p2] = arr[p2], arr[p1]
+        p2 -= 1
+    elif arr[p2] == 0:
+        p2 -= 1
+    else:
+        p1 += 1
+
+print("Zeros moved to end:", arr)`,
+
+  javascript: `// Move Zeros to End (Two Pointer)
+let arr = [0, 1, 0, 3, 0, 2, 4, 0, 1, 0, 0, 3, 2, 0, 1];
+let p1 = 0;
+let p2 = arr.length - 1;
+
+while (p1 < p2) {
+  if (arr[p1] === 0 && arr[p2] !== 0) {
+    [arr[p1], arr[p2]] = [arr[p2], arr[p1]];
+    p2--;
+  } else if (arr[p2] === 0) {
+    p2--;
+  } else {
+    p1++;
+  }
+}
+
+console.log("Zeros moved to end:", arr);`,
+
+  c: `// Move Zeros to End (Two Pointer)
+#include <stdio.h>
+
+int main() {
+  int arr[] = {0, 1, 0, 3, 0, 2, 4, 0, 1, 0, 0, 3, 2, 0, 1};
+  int n = sizeof(arr)/sizeof(arr[0]);
+  int p1 = 0, p2 = n - 1;
+
+  while (p1 < p2) {
+    if (arr[p1] == 0 && arr[p2] != 0) {
+      int temp = arr[p1];
+      arr[p1] = arr[p2];
+      arr[p2] = temp;
+      p2--;
+    } else if (arr[p2] == 0) {
+      p2--;
+    } else {
+      p1++;
+    }
+  }
+
+  printf("Zeros moved to end: ");
+  for (int i = 0; i < n; i++) {
+    printf("%d ", arr[i]);
+  }
+  printf("\\n");
+
+  return 0;
+}`
+}

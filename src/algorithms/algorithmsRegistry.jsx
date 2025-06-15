@@ -1,5 +1,5 @@
 // searching algos
-import { linearSearchSetup, linearSearchDraw } from "./searching/linearSearch";
+import { linearSearchSetup, linearSearchDraw, linearSearchCode } from "./searching/linearSearch";
 import { jumpSearchSetup, jumpSearchDraw } from "./searching/jumpSearch"; // faster version of linear search
 import { binarySearchSetup, binarySearchDraw } from "./searching/binarySearch";
 import { interpolationSearchSetup, interpolationSearchDraw } from "./searching/interpolationSearch"; // faster version of binary search
@@ -21,10 +21,12 @@ import { maxSumSubArraySetup, maxSumSubArrayDraw } from "./slidingWindow/maxSumS
 import { pairWithGivenSumSetup, pairWithGivenSumDraw } from "./twoPointer/pairWithGivenSum";
 import { moveZerosToEndSetup, moveZerosToEndDraw } from "./twoPointer/moveZerosToEnd";
 import { reverseArrayUsingTwoPointersSetup, reverseArrayUsingTwoPointersDraw } from "./twoPointer/reverseArrayUsingTwoPointers";
+import { threeSumDraw, threeSumSetup } from "./twoPointer/threeSum";
 
 // random algos
 import { reverseArrayUsingOnePointerSetup, reverseArrayUsingOnePointerDraw } from "./randomAlgos/reverseArrayUsingOnePointer";
 import { mergeTwoSortedArraysSetup, mergeTwoSortedArraysDraw } from "./randomAlgos/mergeTwoSortedArrays";
+import { palindromeCheckDraw, palindromeCheckSetup } from "./randomAlgos/palindromeCheck";
 
 export const ALGORITHMS = {
     // SEARCHING
@@ -34,7 +36,7 @@ export const ALGORITHMS = {
         setup: linearSearchSetup,
         draw: linearSearchDraw,
         description: "Finds elements by checking each one sequentially...[under work]",
-        code: "// Linear search implementation... [under work]"
+        code: linearSearchCode
     },
     jumpSearch: {
         key:"jumpSearch",
@@ -151,6 +153,14 @@ export const ALGORITHMS = {
         description: "Finds the maximum sum of a subarray of size k... [under work]",
         code: "// Max sum subarray implementation... [under work]"
     },
+    threeSum:{
+        key:"threeSum",
+        name:"Three Sum: Sum to Zero",
+        setup: threeSumSetup,
+        draw: threeSumDraw,
+        description: "Finds the three num sum to 0... [under work]",
+        code: "// Three Sum to Zero implementation... [under work]"
+    },
     // RANDOM ALGOS
     reverseArrayUsingOnePointer:{
         key:"reverseArrayUsingOnePointer",
@@ -167,5 +177,13 @@ export const ALGORITHMS = {
         draw: mergeTwoSortedArraysDraw,
         description: "Finds the maximum sum of a subarray of size k... [under work]",
         code: "// Max sum subarray implementation... [under work]"
-    }
+    },
+    palindromeCheck:{
+        key:"palindromeCheck",
+        name:"Palindrome Check",
+        setup: palindromeCheckSetup,
+        draw: palindromeCheckDraw,
+        description: "check for palindrome... [under work]",
+        code: "// check palindrome implementation... [under work]"
+    },
 }

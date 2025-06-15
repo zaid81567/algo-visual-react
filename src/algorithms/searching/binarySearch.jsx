@@ -70,3 +70,79 @@ export const binarySearchDraw = (p5) => {
     p5.mid = (p5.l+p5.r)/2;
   }
 };
+
+
+// CODE SNIPPET
+export const binarySearchCode = {
+  python: `# Binary Search
+arr = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+target = 5
+
+l = 0
+r = len(arr) - 1
+found = False
+
+while l <= r:
+    mid = (l + r) // 2
+    if arr[mid] == target:
+        found = True
+        break
+    elif arr[mid] < target:
+        l = mid + 1
+    else:
+        r = mid - 1
+
+print("Found:", found)`,
+  
+  javascript: `// Binary Search
+let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+let target = 5;
+
+let l = 0;
+let r = arr.length - 1;
+let found = false;
+
+while (l <= r) {
+  let mid = Math.floor((l + r) / 2);
+  if (arr[mid] === target) {
+    found = true;
+    break;
+  } else if (arr[mid] < target) {
+    l = mid + 1;
+  } else {
+    r = mid - 1;
+  }
+}
+
+console.log("Found:", found);`,
+
+  c: `// Binary Search
+#include <stdio.h>
+
+int main() {
+  int arr[] = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+  int target = 5;
+  int l = 0;
+  int r = sizeof(arr) / sizeof(arr[0]) - 1;
+  int found = 0;
+
+  while (l <= r) {
+    int mid = (l + r) / 2;
+    if (arr[mid] == target) {
+      found = 1;
+      break;
+    } else if (arr[mid] < target) {
+      l = mid + 1;
+    } else {
+      r = mid - 1;
+    }
+  }
+
+  if (found)
+    printf("Found: true\\n");
+  else
+    printf("Found: false\\n");
+
+  return 0;
+}`
+}

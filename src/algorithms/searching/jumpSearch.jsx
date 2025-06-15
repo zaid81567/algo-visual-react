@@ -93,3 +93,87 @@ export const jumpSearchDraw = (p5) => {
     p5.noLoop = true;
   }
 }
+
+
+// CODE SNIPPET
+export const jumpSearchCode = {
+  python: `# Jump Search
+import math
+
+arr = sorted([3, 7, 9, 12, 17, 21, 23, 26, 31, 34, 38, 42, 47, 50, 55])
+target = 26
+n = len(arr)
+step = int(math.sqrt(n))
+prev = 0
+
+while prev < n and arr[min(step, n)-1] < target:
+    prev = step
+    step += int(math.sqrt(n))
+    if prev >= n:
+        print("Not Found")
+        exit()
+
+for i in range(prev, min(step, n)):
+    if arr[i] == target:
+        print("Found at index:", i)
+        break
+else:
+    print("Not Found")`,
+
+  javascript: `// Jump Search
+let arr = [3, 7, 9, 12, 17, 21, 23, 26, 31, 34, 38, 42, 47, 50, 55];
+let target = 26;
+let n = arr.length;
+let step = Math.floor(Math.sqrt(n));
+let prev = 0;
+
+while (prev < n && arr[Math.min(step, n) - 1] < target) {
+  prev = step;
+  step += Math.floor(Math.sqrt(n));
+  if (prev >= n) {
+    console.log("Not Found");
+    break;
+  }
+}
+
+for (let i = prev; i < Math.min(step, n); i++) {
+  if (arr[i] === target) {
+    console.log("Found at index:", i);
+    break;
+  }
+  if (i === Math.min(step, n) - 1) {
+    console.log("Not Found");
+  }
+}`,
+
+  c: `// Jump Search
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+  int arr[] = {3, 7, 9, 12, 17, 21, 23, 26, 31, 34, 38, 42, 47, 50, 55};
+  int n = sizeof(arr) / sizeof(arr[0]);
+  int target = 26;
+  int step = sqrt(n);
+  int prev = 0;
+
+  while (prev < n && arr[fmin(step, n) - 1] < target) {
+    prev = step;
+    step += sqrt(n);
+    if (prev >= n) {
+      printf("Not Found\\n");
+      return 0;
+    }
+  }
+
+  for (int i = prev; i < fmin(step, n); i++) {
+    if (arr[i] == target) {
+      printf("Found at index: %d\\n", i);
+      return 0;
+    }
+  }
+
+  printf("Not Found\\n");
+  return 0;
+}`
+}

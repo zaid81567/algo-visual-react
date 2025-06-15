@@ -71,3 +71,77 @@ export const interpolationSearchDraw = (p5) => {
     p5.mid = p5.mid = Math.floor(p5.l + (((p5.h - p5.l) * (p5.target - p5.values[p5.l])) / (p5.values[p5.h] - p5.values[p5.l])));
   }
 };
+
+
+// CODE SNIPPET
+export const interpolationSearchCodeSnippet = {
+  python: `# Interpolation Search
+arr = sorted([3, 7, 9, 12, 17, 19, 23, 26, 31, 34, 38, 42, 47, 50, 55])
+target = 26
+low = 0
+high = len(arr) - 1
+found = False
+
+while low <= high and arr[low] <= target <= arr[high]:
+    pos = low + ((high - low) * (target - arr[low])) // (arr[high] - arr[low])
+    if arr[pos] == target:
+        found = True
+        break
+    elif arr[pos] < target:
+        low = pos + 1
+    else:
+        high = pos - 1
+
+print("Found:", found)`,
+  
+  javascript: `// Interpolation Search
+let arr = [3, 7, 9, 12, 17, 19, 23, 26, 31, 34, 38, 42, 47, 50, 55];
+let target = 26;
+let low = 0;
+let high = arr.length - 1;
+let found = false;
+
+while (low <= high && arr[low] <= target && arr[high] >= target) {
+  let pos = Math.floor(low + ((high - low) * (target - arr[low])) / (arr[high] - arr[low]));
+  if (arr[pos] === target) {
+    found = true;
+    break;
+  } else if (arr[pos] < target) {
+    low = pos + 1;
+  } else {
+    high = pos - 1;
+  }
+}
+
+console.log("Found:", found);`,
+
+  c: `// Interpolation Search
+#include <stdio.h>
+
+int main() {
+  int arr[] = {3, 7, 9, 12, 17, 19, 23, 26, 31, 34, 38, 42, 47, 50, 55};
+  int n = sizeof(arr) / sizeof(arr[0]);
+  int target = 26;
+  int low = 0, high = n - 1;
+  int found = 0;
+
+  while (low <= high && arr[low] <= target && arr[high] >= target) {
+    int pos = low + ((double)(high - low) * (target - arr[low])) / (arr[high] - arr[low]);
+    if (arr[pos] == target) {
+      found = 1;
+      break;
+    } else if (arr[pos] < target) {
+      low = pos + 1;
+    } else {
+      high = pos - 1;
+    }
+  }
+
+  if (found)
+    printf("Found: true\\n");
+  else
+    printf("Found: false\\n");
+
+  return 0;
+}`
+}

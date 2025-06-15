@@ -75,3 +75,79 @@ export const dnfAlgoDraw = (p5) => {
   }
 
 };
+
+
+// CODE SNIPPET
+export const dnfAlgoCode = {
+  python: `# Dutch National Flag Algorithm
+arr = [0, 2, 1, 2, 0, 1, 2, 1, 0, 0, 2, 1, 0, 1, 2]
+low = 0
+mid = 0
+high = len(arr) - 1
+
+while mid <= high:
+    if arr[mid] == 0:
+        arr[low], arr[mid] = arr[mid], arr[low]
+        low += 1
+        mid += 1
+    elif arr[mid] == 1:
+        mid += 1
+    else:
+        arr[mid], arr[high] = arr[high], arr[mid]
+        high -= 1
+
+print("Sorted array:", arr)`,
+
+  javascript: `// Dutch National Flag Algorithm
+let arr = [0, 2, 1, 2, 0, 1, 2, 1, 0, 0, 2, 1, 0, 1, 2];
+let low = 0, mid = 0, high = arr.length - 1;
+
+while (mid <= high) {
+  if (arr[mid] === 0) {
+    [arr[low], arr[mid]] = [arr[mid], arr[low]];
+    low++;
+    mid++;
+  } else if (arr[mid] === 1) {
+    mid++;
+  } else {
+    [arr[mid], arr[high]] = [arr[high], arr[mid]];
+    high--;
+  }
+}
+
+console.log("Sorted array:", arr);`,
+
+  c: `// Dutch National Flag Algorithm
+#include <stdio.h>
+
+int main() {
+  int arr[] = {0, 2, 1, 2, 0, 1, 2, 1, 0, 0, 2, 1, 0, 1, 2};
+  int n = sizeof(arr)/sizeof(arr[0]);
+  int low = 0, mid = 0, high = n - 1;
+
+  while (mid <= high) {
+    if (arr[mid] == 0) {
+      int temp = arr[low];
+      arr[low] = arr[mid];
+      arr[mid] = temp;
+      low++;
+      mid++;
+    } else if (arr[mid] == 1) {
+      mid++;
+    } else {
+      int temp = arr[mid];
+      arr[mid] = arr[high];
+      arr[high] = temp;
+      high--;
+    }
+  }
+
+  printf("Sorted array: ");
+  for (int i = 0; i < n; i++) {
+    printf("%d ", arr[i]);
+  }
+  printf("\\n");
+
+  return 0;
+}`
+}

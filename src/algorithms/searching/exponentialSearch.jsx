@@ -116,3 +116,90 @@ export const exponentialSearchDraw = (p5) => {
     p5.noLoop = true;
   }
 }
+
+
+// CODE SNIPPET
+export const exponentialSearchCodeSnippet = {
+  python: `# Exponential Search
+def binary_search(arr, l, h, target):
+    while l <= h:
+        mid = (l + h) // 2
+        if arr[mid] == target:
+            return mid
+        elif arr[mid] < target:
+            l = mid + 1
+        else:
+            h = mid - 1
+    return -1
+
+arr = sorted([3, 6, 8, 10, 15, 18, 21, 25, 28, 30, 32, 35, 38, 40, 45])
+target = 25
+
+if arr[0] == target:
+    print("Found at index 0")
+else:
+    i = 1
+    while i < len(arr) and arr[i] <= target:
+        i *= 2
+    result = binary_search(arr, i//2, min(i, len(arr)-1), target)
+    print("Found at index:", result if result != -1 else "Not Found")`,
+
+  javascript: `// Exponential Search
+function binarySearch(arr, l, h, target) {
+  while (l <= h) {
+    let mid = Math.floor((l + h) / 2);
+    if (arr[mid] === target) return mid;
+    else if (arr[mid] < target) l = mid + 1;
+    else h = mid - 1;
+  }
+  return -1;
+}
+
+let arr = [3, 6, 8, 10, 15, 18, 21, 25, 28, 30, 32, 35, 38, 40, 45];
+let target = 25;
+
+if (arr[0] === target) {
+  console.log("Found at index 0");
+} else {
+  let i = 1;
+  while (i < arr.length && arr[i] <= target) {
+    i *= 2;
+  }
+  let result = binarySearch(arr, Math.floor(i/2), Math.min(i, arr.length - 1), target);
+  console.log("Found at index:", result !== -1 ? result : "Not Found");
+}`,
+
+  c: `// Exponential Search
+#include <stdio.h>
+
+int binarySearch(int arr[], int l, int h, int target) {
+  while (l <= h) {
+    int mid = (l + h) / 2;
+    if (arr[mid] == target) return mid;
+    else if (arr[mid] < target) l = mid + 1;
+    else h = mid - 1;
+  }
+  return -1;
+}
+
+int main() {
+  int arr[] = {3, 6, 8, 10, 15, 18, 21, 25, 28, 30, 32, 35, 38, 40, 45};
+  int n = sizeof(arr) / sizeof(arr[0]);
+  int target = 25;
+
+  if (arr[0] == target) {
+    printf("Found at index 0\\n");
+  } else {
+    int i = 1;
+    while (i < n && arr[i] <= target)
+      i *= 2;
+    int result = binarySearch(arr, i/2, i < n ? i : n - 1, target);
+    if (result != -1)
+      printf("Found at index: %d\\n", result);
+    else
+      printf("Not Found\\n");
+  }
+
+  return 0;
+}`
+}

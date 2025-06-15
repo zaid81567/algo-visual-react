@@ -57,3 +57,62 @@ export const linearSearchDraw = (p5) => {
     }
   }
 };
+
+export const linearSearchCode = {
+  python: `
+def linear_search(arr, target):
+    for index in range(len(arr)):
+        if arr[index] == target:
+            return index
+    return -1
+
+# Example
+arr = [5, 3, 8, 4, 2]
+target = 4
+result = linear_search(arr, target)
+print("Found at index:" if result != -1 else "Not found", result)
+`.trim(),
+
+  javascript: `
+function linearSearch(arr, target) {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === target) {
+      return i;
+    }
+  }
+  return -1;
+}
+
+// Example
+const arr = [5, 3, 8, 4, 2];
+const target = 4;
+const result = linearSearch(arr, target);
+console.log(result !== -1 ? "Found at index: " + result : "Not found");
+`.trim(),
+
+  c: `
+#include <stdio.h>
+
+int linearSearch(int arr[], int size, int target) {
+  for (int i = 0; i < size; i++) {
+    if (arr[i] == target) {
+      return i;
+    }
+  }
+  return -1;
+}
+
+int main() {
+  int arr[] = {5, 3, 8, 4, 2};
+  int target = 4;
+  int size = sizeof(arr) / sizeof(arr[0]);
+  int result = linearSearch(arr, size, target);
+  if (result != -1)
+    printf("Found at index: %d\\n", result);
+  else
+    printf("Not found\\n");
+  return 0;
+}
+`.trim()
+};
+

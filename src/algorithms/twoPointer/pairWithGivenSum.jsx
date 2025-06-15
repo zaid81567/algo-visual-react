@@ -79,3 +79,88 @@ export const pairWithGivenSumDraw = (p5) => {
   }
 
 };
+
+// CODE SNIPPET
+export const pairWithGivenSumCode = {
+  python: `# Pair with Given Sum (Two Pointer)
+arr = sorted([5, 2, 9, 4, 1, 0, 3, 8, 7, 6, 11, 10, 13, 12, 14])
+target_sum = arr[2] + arr[11]  # example random pair for target
+p1, p2 = 0, len(arr) - 1
+pair_found = False
+
+while p1 < p2:
+    current_sum = arr[p1] + arr[p2]
+    if current_sum == target_sum:
+        print(f"Pair found: {arr[p1]} + {arr[p2]} = {target_sum}")
+        pair_found = True
+        break
+    elif current_sum < target_sum:
+        p1 += 1
+    else:
+        p2 -= 1
+
+if not pair_found:
+    print("No pair found.")`,
+
+  javascript: `// Pair with Given Sum (Two Pointer)
+let arr = [5, 2, 9, 4, 1, 0, 3, 8, 7, 6, 11, 10, 13, 12, 14].sort((a, b) => a - b);
+let targetSum = arr[2] + arr[11]; // example pair
+let p1 = 0;
+let p2 = arr.length - 1;
+let found = false;
+
+while (p1 < p2) {
+  let currentSum = arr[p1] + arr[p2];
+  if (currentSum === targetSum) {
+    console.log(\`Pair found: \${arr[p1]} + \${arr[p2]} = \${targetSum}\`);
+    found = true;
+    break;
+  } else if (currentSum < targetSum) {
+    p1++;
+  } else {
+    p2--;
+  }
+}
+
+if (!found) {
+  console.log("No pair found.");
+}`,
+
+  c: `// Pair with Given Sum (Two Pointer)
+#include <stdio.h>
+#include <stdlib.h>
+
+int compare(const void *a, const void *b) {
+  return (*(int *)a - *(int *)b);
+}
+
+int main() {
+  int arr[] = {5, 2, 9, 4, 1, 0, 3, 8, 7, 6, 11, 10, 13, 12, 14};
+  int n = sizeof(arr)/sizeof(arr[0]);
+
+  qsort(arr, n, sizeof(int), compare);
+
+  int targetSum = arr[2] + arr[11]; // example pair
+  int p1 = 0, p2 = n - 1;
+  int found = 0;
+
+  while (p1 < p2) {
+    int sum = arr[p1] + arr[p2];
+    if (sum == targetSum) {
+      printf("Pair found: %d + %d = %d\\n", arr[p1], arr[p2], targetSum);
+      found = 1;
+      break;
+    } else if (sum < targetSum) {
+      p1++;
+    } else {
+      p2--;
+    }
+  }
+
+  if (!found) {
+    printf("No pair found.\\n");
+  }
+
+  return 0;
+}`
+}

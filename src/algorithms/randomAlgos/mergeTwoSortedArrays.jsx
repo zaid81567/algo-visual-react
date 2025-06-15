@@ -127,3 +127,90 @@ export const mergeTwoSortedArraysSetup = (p5, canvasParentRef) => {
  
  };
  
+
+ // CODE SNIPPET
+ export const mergeTwoSortedArraysCode = {
+  python: `# Merge two sorted arrays
+arr1 = [1, 3, 5, 7]
+arr2 = [2, 4, 6, 8, 10]
+
+merged = []
+i = j = 0
+
+while i < len(arr1) and j < len(arr2):
+    if arr1[i] < arr2[j]:
+        merged.append(arr1[i])
+        i += 1
+    else:
+        merged.append(arr2[j])
+        j += 1
+
+while i < len(arr1):
+    merged.append(arr1[i])
+    i += 1
+
+while j < len(arr2):
+    merged.append(arr2[j])
+    j += 1
+
+print("Merged array:", merged)`,
+  
+  javascript: `// Merge two sorted arrays
+const arr1 = [1, 3, 5, 7];
+const arr2 = [2, 4, 6, 8, 10];
+let merged = [];
+
+let i = 0, j = 0;
+
+while (i < arr1.length && j < arr2.length) {
+  if (arr1[i] < arr2[j]) {
+    merged.push(arr1[i]);
+    i++;
+  } else {
+    merged.push(arr2[j]);
+    j++;
+  }
+}
+
+while (i < arr1.length) {
+  merged.push(arr1[i]);
+  i++;
+}
+
+while (j < arr2.length) {
+  merged.push(arr2[j]);
+  j++;
+}
+
+console.log("Merged array:", merged);`,
+
+  c: `// Merge two sorted arrays
+#include <stdio.h>
+
+int main() {
+  int arr1[] = {1, 3, 5, 7};
+  int arr2[] = {2, 4, 6, 8, 10};
+  int merged[9];
+  int i = 0, j = 0, k = 0;
+  int n1 = 4, n2 = 5;
+
+  while (i < n1 && j < n2) {
+    if (arr1[i] < arr2[j])
+      merged[k++] = arr1[i++];
+    else
+      merged[k++] = arr2[j++];
+  }
+
+  while (i < n1)
+    merged[k++] = arr1[i++];
+
+  while (j < n2)
+    merged[k++] = arr2[j++];
+
+  printf("Merged array: ");
+  for (int m = 0; m < n1 + n2; m++)
+    printf("%d ", merged[m]);
+
+  return 0;
+}`
+}

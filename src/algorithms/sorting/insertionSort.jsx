@@ -45,6 +45,8 @@ export const insertionSortDraw = (p5) => {
         }
     }else if ( i == p5.key){
       p5.fill(accent_green)
+    }else if ( i < p5.key){
+      p5.fill(200)
     }else{
         p5.fill(255)
     }
@@ -90,3 +92,64 @@ export const insertionSortDraw = (p5) => {
   }
 
 };
+
+
+// CODE SNIPPET
+export const insertionSortCode = {
+  python: `# Insertion Sort
+arr = [5, 3, 2, 6, 4, 1, 8, 7, 9, 0, 11, 10, 12, 1, 2]
+
+for i in range(1, len(arr)):
+    key = arr[i]
+    j = i - 1
+
+    while j >= 0 and arr[j] > key:
+        arr[j + 1] = arr[j]
+        j -= 1
+    arr[j + 1] = key
+
+print("Sorted array:", arr)`,
+
+  javascript: `// Insertion Sort
+let arr = [5, 3, 2, 6, 4, 1, 8, 7, 9, 0, 11, 10, 12, 1, 2];
+
+for (let i = 1; i < arr.length; i++) {
+  let key = arr[i];
+  let j = i - 1;
+
+  while (j >= 0 && arr[j] > key) {
+    arr[j + 1] = arr[j];
+    j--;
+  }
+  arr[j + 1] = key;
+}
+
+console.log("Sorted array:", arr);`,
+
+  c: `// Insertion Sort
+#include <stdio.h>
+
+int main() {
+  int arr[] = {5, 3, 2, 6, 4, 1, 8, 7, 9, 0, 11, 10, 12, 1, 2};
+  int n = sizeof(arr)/sizeof(arr[0]);
+
+  for (int i = 1; i < n; i++) {
+    int key = arr[i];
+    int j = i - 1;
+
+    while (j >= 0 && arr[j] > key) {
+      arr[j + 1] = arr[j];
+      j--;
+    }
+    arr[j + 1] = key;
+  }
+
+  printf("Sorted array: ");
+  for (int i = 0; i < n; i++) {
+    printf("%d ", arr[i]);
+  }
+  printf("\\n");
+
+  return 0;
+}`
+}
