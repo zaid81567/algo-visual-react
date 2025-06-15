@@ -163,3 +163,12 @@ int main() {
   return 0;
 }`
 }
+
+// ALGO DATA
+export const palindromeCheckData = {
+  spaceComplexityBest: "O(1)",
+  spaceComplexityWorst: "O(1)",
+  timeComplexityBest: "O(1)",
+  timeComplexityWorst: "O(n)",
+  description: "Palindrome Check using Two Pointers is an efficient way to determine if a string reads the same forwards and backwards. It uses two pointers, one starting at the beginning and the other at the end of the string, and compares characters until they meet in the middle.",
+};

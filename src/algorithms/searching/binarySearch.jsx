@@ -146,3 +146,12 @@ int main() {
   return 0;
 }`
 }
+
+// ALGO DATA
+export const binarySearchData = {
+  spaceComplexityBest: "O(1)",
+  spaceComplexityWorst: "O(1)",
+  timeComplexityBest: "O(1)",
+  timeComplexityWorst: "O(log n)",
+  description: "Binary Search is an efficient algorithm for finding an item from a sorted list of items. It works by repeatedly dividing the search interval in half. If the value of the search key is less than the item in the middle of the interval, narrow the interval to the lower half. Otherwise, narrow it to the upper half. Repeatedly check until the value is found or the interval is empty.",
+};

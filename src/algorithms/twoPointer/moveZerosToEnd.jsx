@@ -140,3 +140,13 @@ int main() {
   return 0;
 }`
 }
+
+
+// ALGO DATA
+export const moveZerosToEndData = {
+  spaceComplexityBest: "O(1)",
+  spaceComplexityWorst: "O(1)",
+  timeComplexityBest: "O(n)",
+  timeComplexityWorst: "O(n)",
+  description: "The Move Zeros to End algorithm uses a two-pointer technique to efficiently move all zeros in an array to the end while maintaining the order of non-zero elements. It iterates through the array, swapping zeros with non-zero elements as needed, ensuring that all zeros are moved to the end of the array.",
+};

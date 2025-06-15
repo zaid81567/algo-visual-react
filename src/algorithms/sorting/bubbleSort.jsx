@@ -70,7 +70,7 @@ export const bubbleSortDraw = (p5) => {
 };
 
 // CODE SNIPPET
-export const bubbleSortCodeSnippet = {
+export const bubbleSortCode = {
   python: `# Bubble Sort
 arr = [5, 1, 4, 2, 8, 0, 2]
 n = len(arr)
@@ -140,3 +140,12 @@ int main() {
   return 0;
 }`
 }
+
+// BUBBLE SORT DATA
+export const bubbleSortData = {
+  spaceComplexityBest: "O(1)",
+  spaceComplexityWorst: "O(1)",
+  timeComplexityBest: "O(n)",
+  timeComplexityWorst: "O(n^2)",
+  description: "Bubble Sort is a simple sorting algorithm that repeatedly steps through the list, compares adjacent elements, and swaps them if they are in the wrong order. The pass through the list is repeated until no swaps are needed, indicating that the list is sorted. It is not suitable for large datasets due to its O(n^2) time complexity.",
+};

@@ -118,3 +118,13 @@ int main() {
   return 0;
 }`
 }
+
+
+// ALGO DATA
+export const maxSumSubArrayData = {
+  spaceComplexityBest: "O(1)",
+  spaceComplexityWorst: "O(1)",
+  timeComplexityBest: "O(n)",
+  timeComplexityWorst: "O(n)",
+  description: "The Sliding Window Maximum Sum Subarray algorithm finds the maximum sum of a contiguous subarray of size k in an array. It uses a sliding window technique to efficiently calculate the sum of elements in the current window and updates the maximum sum found.",
+};

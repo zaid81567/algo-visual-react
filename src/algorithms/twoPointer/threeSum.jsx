@@ -215,3 +215,13 @@ int main() {
     return 0;
 }`
 }
+
+
+// ALGO DATA
+export const threeSumData = {
+  spaceComplexityBest: "O(1)",
+  spaceComplexityWorst: "O(1)",
+  timeComplexityBest: "O(n^2)",
+  timeComplexityWorst: "O(n^2)",
+  description: "The Three Sum problem is a classic algorithmic problem that involves finding all unique triplets in an array that sum to zero. It is often solved using the two-pointer technique after sorting the array, which reduces the time complexity to O(n^2).",
+};

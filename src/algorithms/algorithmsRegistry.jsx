@@ -1,32 +1,32 @@
 // searching algos
-import { linearSearchSetup, linearSearchDraw, linearSearchCode } from "./searching/linearSearch";
-import { jumpSearchSetup, jumpSearchDraw } from "./searching/jumpSearch"; // faster version of linear search
-import { binarySearchSetup, binarySearchDraw } from "./searching/binarySearch";
-import { interpolationSearchSetup, interpolationSearchDraw } from "./searching/interpolationSearch"; // faster version of binary search
-import { exponentialSearchSetup, exponentialSearchDraw } from "./searching/exponentialSearch"; 
+import { linearSearchSetup, linearSearchDraw, linearSearchCode, linearSearchData } from "./searching/linearSearch";
+import { jumpSearchSetup, jumpSearchDraw, jumpSearchCode, jumpSearchData } from "./searching/jumpSearch"; // faster version of linear search
+import { binarySearchSetup, binarySearchDraw, binarySearchCode, binarySearchData } from "./searching/binarySearch";
+import { interpolationSearchSetup, interpolationSearchDraw, interpolationSearchCode, interpolationSearchData } from "./searching/interpolationSearch"; // faster version of binary search
+import { exponentialSearchSetup, exponentialSearchDraw, exponentialSearchCode, exponentialSearchData } from "./searching/exponentialSearch"; 
 
 // sorting algos
-import { bubbleSortSetup, bubbleSortDraw } from "./sorting/bubbleSort";
-import { combSortSetup, combSortDraw } from "./sorting/combSort"; // varient of bubble sort
-import { selectionSortSetup, selectionSortDraw } from "./sorting/selectionSort";
-import { insertionSortSetup, insertionSortDraw } from "./sorting/insertionSort";
-import { cycleSortSetup, cycleSortDraw } from "./sorting/cycleSort";
-import { dnfAlgoSetup, dnfAlgoDraw } from "./sorting/dnfAlgo";
+import { bubbleSortSetup, bubbleSortDraw, bubbleSortCode, bubbleSortData } from "./sorting/bubbleSort";
+import { combSortSetup, combSortDraw, combSortCode, combSortData} from "./sorting/combSort"; // varient of bubble sort
+import { selectionSortSetup, selectionSortDraw, selectionSortCode, selectionSortData } from "./sorting/selectionSort";
+import { insertionSortSetup, insertionSortDraw, insertionSortCode, insertionSortData } from "./sorting/insertionSort";
+import { cycleSortSetup, cycleSortDraw, cycleSortCode, cycleSortData } from "./sorting/cycleSort";
+import { dnfAlgoSetup, dnfAlgoDraw, dnfAlgoCode, dnfAlgoData } from "./sorting/dnfAlgo";
 
 // sliding window algos
-import { maxSumSubArraySetup, maxSumSubArrayDraw } from "./slidingWindow/maxSumSubArray"; // find the maximum sum of a subarray of size k
+import { maxSumSubArraySetup, maxSumSubArrayDraw, maxSumSubArrayCode, maxSumSubArrayData } from "./slidingWindow/maxSumSubArray"; // find the maximum sum of a subarray of size k
 
 
 // two pointer
-import { pairWithGivenSumSetup, pairWithGivenSumDraw } from "./twoPointer/pairWithGivenSum";
-import { moveZerosToEndSetup, moveZerosToEndDraw } from "./twoPointer/moveZerosToEnd";
-import { reverseArrayUsingTwoPointersSetup, reverseArrayUsingTwoPointersDraw } from "./twoPointer/reverseArrayUsingTwoPointers";
-import { threeSumDraw, threeSumSetup } from "./twoPointer/threeSum";
+import { pairWithGivenSumSetup, pairWithGivenSumDraw, pairWithGivenSumCode, pairWithGivenSumData } from "./twoPointer/pairWithGivenSum";
+import { moveZerosToEndSetup, moveZerosToEndDraw, moveZerosToEndCode, moveZerosToEndData } from "./twoPointer/moveZerosToEnd";
+import { reverseArrayUsingTwoPointersSetup, reverseArrayUsingTwoPointersDraw, reverseArrayUsingTwoPointersCode, reverseArrayUsingTwoPointersData } from "./twoPointer/reverseArrayUsingTwoPointers";
+import { threeSumDraw, threeSumSetup, threeSumCode, threeSumData } from "./twoPointer/threeSum";
 
 // random algos
-import { reverseArrayUsingOnePointerSetup, reverseArrayUsingOnePointerDraw } from "./randomAlgos/reverseArrayUsingOnePointer";
-import { mergeTwoSortedArraysSetup, mergeTwoSortedArraysDraw } from "./randomAlgos/mergeTwoSortedArrays";
-import { palindromeCheckDraw, palindromeCheckSetup } from "./randomAlgos/palindromeCheck";
+import { reverseArrayUsingOnePointerSetup, reverseArrayUsingOnePointerDraw, reverseArrayUsingOnePointerCode, reverseArrayUsingOnePointerData } from "./randomAlgos/reverseArrayUsingOnePointer";
+import { mergeTwoSortedArraysSetup, mergeTwoSortedArraysDraw, mergeTwoSortedArraysCode, mergeTwoSortedArraysData } from "./randomAlgos/mergeTwoSortedArrays";
+import { palindromeCheckDraw, palindromeCheckSetup, palindromeCheckCode, palindromeCheckData } from "./randomAlgos/palindromeCheck";
 
 export const ALGORITHMS = {
     // SEARCHING
@@ -36,7 +36,8 @@ export const ALGORITHMS = {
         setup: linearSearchSetup,
         draw: linearSearchDraw,
         description: "Finds elements by checking each one sequentially...[under work]",
-        code: linearSearchCode
+        code: linearSearchCode,
+        data: linearSearchData
     },
     jumpSearch: {
         key:"jumpSearch",
@@ -44,7 +45,8 @@ export const ALGORITHMS = {
         setup: jumpSearchSetup,
         draw: jumpSearchDraw,
         description: "Finds elements by checking each one sequentially...[under work]",
-        code: "// Linear search implementation... [under work]"
+        code: jumpSearchCode,
+        data: jumpSearchData
     },
     binarySearch: {
         key:"binarySearch",
@@ -52,7 +54,8 @@ export const ALGORITHMS = {
         setup: binarySearchSetup,
         draw: binarySearchDraw,
         description: "Finds elements by checking each one sequentially...[under work]",
-        code: "// Linear search implementation... [under work]"
+        code: binarySearchCode,
+        data: binarySearchData
     },
     interpolationSearch: {
         key:"interpolationSearch",
@@ -60,7 +63,8 @@ export const ALGORITHMS = {
         setup: interpolationSearchSetup,
         draw: interpolationSearchDraw,
         description: "Finds elements by checking each one sequentially...[under work]",
-        code: "// Linear search implementation... [under work]"
+        code: interpolationSearchCode,
+        data: interpolationSearchData
     },
     exponentialSearch: {
         key:"exponentialSearch",
@@ -68,7 +72,8 @@ export const ALGORITHMS = {
         setup: exponentialSearchSetup,
         draw: exponentialSearchDraw,
         description: "Finds elements by checking each one sequentially...[under work]",
-        code: "// Exponential search implementation... [under work]"
+        code: exponentialSearchCode,
+        data: exponentialSearchData
     },
     // SORTING
     bubbleSort: {
@@ -77,7 +82,8 @@ export const ALGORITHMS = {
         setup: bubbleSortSetup,
         draw: bubbleSortDraw,
         description: "Repeatedly swaps adjacent elements... [under work]",
-        code: "// Bubble sort implementation... [under work]"
+        code: bubbleSortCode,
+        data: bubbleSortData
     },
     combSort: {
         key:"combSort",
@@ -85,7 +91,8 @@ export const ALGORITHMS = {
         setup: combSortSetup,
         draw: combSortDraw,
         description: "Repeatedly swaps adjacent elements... [under work]",
-        code: "// Bubble sort implementation... [under work]"
+        code: combSortCode,
+        data: combSortData
     },
     selectionSort: {
         key:"selectionSort",
@@ -93,7 +100,8 @@ export const ALGORITHMS = {
         setup: selectionSortSetup,
         draw: selectionSortDraw,
         description: "Repeatedly swaps min elements... [under work]",
-        code: "// Selection sort implementation... [under work]"
+        code: selectionSortCode,
+        data: selectionSortData
     },
     insertionSort: {
         key:"insertionSort",
@@ -101,7 +109,8 @@ export const ALGORITHMS = {
         setup: insertionSortSetup,
         draw: insertionSortDraw,
         description: "Repeatedly swaps min elements... [under work]",
-        code: "// Selection sort implementation... [under work]"
+        code: insertionSortCode,
+        data: insertionSortData
     },
     cycleSort: {
         key:"cycleSort",
@@ -109,7 +118,8 @@ export const ALGORITHMS = {
         setup: cycleSortSetup,
         draw: cycleSortDraw,
         description: "Repeatedly swaps min elements... [under work]",
-        code: "// Selection sort implementation... [under work]"
+        code: cycleSortCode,
+        data: cycleSortData
     },
     dnfAlgo: {
         key:"dnfAlgo",
@@ -117,7 +127,8 @@ export const ALGORITHMS = {
         setup: dnfAlgoSetup,
         draw: dnfAlgoDraw,
         description: "Repeatedly swaps min elements... [under work]",
-        code: "// Dnf Algorithm implementation... [under work]"
+        code: dnfAlgoCode,
+        data: dnfAlgoData
     },
     // SLIDING WINDOW
     maxSumSubArray: {
@@ -126,7 +137,8 @@ export const ALGORITHMS = {
         setup: maxSumSubArraySetup,
         draw: maxSumSubArrayDraw,
         description: "Finds the maximum sum of a subarray of size k... [under work]",
-        code: "// Max sum subarray implementation... [under work]"
+        code: maxSumSubArrayCode,
+        data: maxSumSubArrayData
     },
     // TWO POINTER
     pairWithGivenSum:{
@@ -135,7 +147,8 @@ export const ALGORITHMS = {
         setup: pairWithGivenSumSetup,
         draw: pairWithGivenSumDraw,
         description: "Finds the maximum sum of a subarray of size k... [under work]",
-        code: "// Max sum subarray implementation... [under work]"
+        code: pairWithGivenSumCode,
+        data: pairWithGivenSumData
     },
     moveZerosToEnd:{
         key:"moveZerosToEnd",
@@ -143,7 +156,8 @@ export const ALGORITHMS = {
         setup: moveZerosToEndSetup,
         draw: moveZerosToEndDraw,
         description: "Finds the maximum sum of a subarray of size k... [under work]",
-        code: "// Max sum subarray implementation... [under work]"
+        code: moveZerosToEndCode,
+        data: moveZerosToEndData
     },
     reverseArrayUsingTwoPointers:{
         key:"reverseArrayUsingTwoPointers",
@@ -151,7 +165,8 @@ export const ALGORITHMS = {
         setup: reverseArrayUsingTwoPointersSetup,
         draw: reverseArrayUsingTwoPointersDraw,
         description: "Finds the maximum sum of a subarray of size k... [under work]",
-        code: "// Max sum subarray implementation... [under work]"
+        code: reverseArrayUsingTwoPointersCode,
+        data: reverseArrayUsingTwoPointersData
     },
     threeSum:{
         key:"threeSum",
@@ -159,7 +174,8 @@ export const ALGORITHMS = {
         setup: threeSumSetup,
         draw: threeSumDraw,
         description: "Finds the three num sum to 0... [under work]",
-        code: "// Three Sum to Zero implementation... [under work]"
+        code: threeSumCode,
+        data: threeSumData
     },
     // RANDOM ALGOS
     reverseArrayUsingOnePointer:{
@@ -168,7 +184,8 @@ export const ALGORITHMS = {
         setup: reverseArrayUsingOnePointerSetup,
         draw: reverseArrayUsingOnePointerDraw,
         description: "Finds the maximum sum of a subarray of size k... [under work]",
-        code: "// Max sum subarray implementation... [under work]"
+        code: reverseArrayUsingOnePointerCode,
+        data: reverseArrayUsingOnePointerData
     },
     mergeTwoSortedArrays:{
         key:"mergeTwoSortedArrays",
@@ -176,7 +193,8 @@ export const ALGORITHMS = {
         setup: mergeTwoSortedArraysSetup,
         draw: mergeTwoSortedArraysDraw,
         description: "Finds the maximum sum of a subarray of size k... [under work]",
-        code: "// Max sum subarray implementation... [under work]"
+        code: mergeTwoSortedArraysCode,
+        data: mergeTwoSortedArraysData
     },
     palindromeCheck:{
         key:"palindromeCheck",
@@ -184,6 +202,7 @@ export const ALGORITHMS = {
         setup: palindromeCheckSetup,
         draw: palindromeCheckDraw,
         description: "check for palindrome... [under work]",
-        code: "// check palindrome implementation... [under work]"
+        code: palindromeCheckCode,
+        data: palindromeCheckData
     },
 }

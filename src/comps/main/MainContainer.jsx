@@ -8,6 +8,7 @@ import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
 // import { linearSearchSetup, linearSearchDraw } from '../../algorithms/searching/linearSearch'
 // import { bubbleSortSetup, bubbleSortDraw } from '../../algorithms/sorting/bubbleSort'
 import { ALGORITHMS } from '../../algorithms/algorithmsRegistry'
+import AlgoDescription from './AlgoDescription';
 
 function MainContainer({selectedAlgo}) {
   const algo = ALGORITHMS[selectedAlgo]
@@ -16,32 +17,19 @@ function MainContainer({selectedAlgo}) {
     setSelectedLanguage(event.target.value);
   };
 
-  const codeString = '(num) => num + 1';  // for code block
-
   return (
         <div className="main-container">
           <div className="main-left">
           <div className="header">{algo.name}</div>
+            {/* display the algo visualisation */}
             <div className="visual-container">
               <P5Wrapper key={algo.name} setup={algo.setup} draw={algo.draw} />
             </div>
-            <div className="description">
-              {/* {algo.description} */}
-              
-              <div class="algo-description-box">
-  <p>
-    <strong>Linear Search</strong> is the simplest search algorithm. It checks each element in the list one by one until the target element is found or the end of the list is reached.
-    It is useful for small or unsorted arrays where implementing more complex algorithms is unnecessary.
-  </p>
-  <ul class="complexity-list">
-    <li><span class="label">Time Complexity (Best):</span> O(1)</li>
-    <li><span class="label">Time Complexity (Worst):</span> O(n)</li>
-    <li><span class="label">Space Complexity:</span> O(1)</li>
-  </ul>
-</div>
-            </div>
+            {/* display the algo description */}
+            <AlgoDescription algoData={algo.data} />
           </div>
 
+          {/* display the code in the right side */}
           <div className="main-right">
               <div className="main-right-header-container">
                 <div className="header">Code</div>

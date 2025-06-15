@@ -163,3 +163,13 @@ int main() {
   return 0;
 }`
 }
+
+
+// ALGO DATA
+export const reverseArrayUsingTwoPointersData = {
+  spaceComplexityBest: "O(1)",
+  spaceComplexityWorst: "O(1)",
+  timeComplexityBest: "O(n)",
+  timeComplexityWorst: "O(n)",
+  description: "Reverse Array Using Two Pointers is an efficient way to reverse an array in place using two pointers. It iterates through the array, swapping elements from the start and end until the pointers meet in the middle.",
+};

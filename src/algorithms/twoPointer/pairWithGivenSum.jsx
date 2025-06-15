@@ -164,3 +164,13 @@ int main() {
   return 0;
 }`
 }
+
+
+// ALGO DATA
+export const pairWithGivenSumData = {
+  spaceComplexityBest: "O(1)",
+  spaceComplexityWorst: "O(1)",
+  timeComplexityBest: "O(1)",
+  timeComplexityWorst: "O(n)",
+  description: "The Pair with Given Sum algorithm uses the Two Pointer technique to find two numbers in a sorted array that add up to a given target sum. It starts with one pointer at the beginning and another at the end of the array, adjusting their positions based on the current sum until the pair is found or all possibilities are exhausted.",
+};

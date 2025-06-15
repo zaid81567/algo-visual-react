@@ -119,7 +119,7 @@ export const exponentialSearchDraw = (p5) => {
 
 
 // CODE SNIPPET
-export const exponentialSearchCodeSnippet = {
+export const exponentialSearchCode = { 
   python: `# Exponential Search
 def binary_search(arr, l, h, target):
     while l <= h:
@@ -203,3 +203,11 @@ int main() {
   return 0;
 }`
 }
+// EXPONENTIAL SEARCH DATA
+export const exponentialSearchData = {
+  spaceComplexityBest: "O(1)",
+  spaceComplexityWorst: "O(log n)",
+  timeComplexityBest: "O(1)",
+  timeComplexityWorst: "O(log n)",
+  description: "Exponential Search is an efficient algorithm for searching in a sorted array. It first finds the range where the target element may exist by repeatedly doubling the index, and then performs a binary search within that range. It is particularly useful for unbounded or infinite lists.",
+};

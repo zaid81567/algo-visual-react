@@ -177,3 +177,12 @@ int main() {
   return 0;
 }`
 }
+
+// ALGO DATA
+export const jumpSearchData = {
+  spaceComplexityBest: "O(1)",
+  spaceComplexityWorst: "O(1)",
+  timeComplexityBest: "O(1)",
+  timeComplexityWorst: "O(√n)",
+  description: "Jump Search is an improvement over linear search for sorted arrays. It works by dividing the array into blocks of a fixed size and performing a linear search within the block where the target may exist. This reduces the number of comparisons in many cases.",
+};

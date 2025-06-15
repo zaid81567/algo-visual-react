@@ -151,3 +151,13 @@ int main() {
   return 0;
 }`
 }
+
+
+// ALGO DATA
+export const dnfAlgoData = {
+  spaceComplexityBest: "O(1)",
+  spaceComplexityWorst: "O(1)",
+  timeComplexityBest: "O(n)",
+  timeComplexityWorst: "O(n)",
+  description: "The Dutch National Flag Algorithm is a one-pass sorting algorithm that sorts an array of three distinct values (like 0s, 1s, and 2s) in linear time. It uses three pointers to partition the array into three sections, ensuring that all elements of one type are grouped together.",
+};

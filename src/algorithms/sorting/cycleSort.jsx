@@ -73,7 +73,7 @@ export const cycleSortDraw = (p5) => {
 
 
 // CODE SNIPPET
-export const cycleSortCodeSnippet = {
+export const cycleSortCode = {
   python: `# Cycle Sort
 arr = [5, 3, 2, 1, 4, 3, 2, 1, 5, 6, 0, 7, 8, 9, 2]
 n = len(arr)
@@ -188,3 +188,12 @@ int main() {
   return 0;
 }`
 }
+
+// CYCLE SORT DATA
+export const cycleSortData = {
+  spaceComplexityBest: "O(1)",
+  spaceComplexityWorst: "O(1)",
+  timeComplexityBest: "O(n^2)",
+  timeComplexityWorst: "O(n^2)",
+  description: "Cycle Sort is an in-place, non-comparison-based sorting algorithm that is optimal for situations where memory writes are costly. It minimizes the number of writes to the array by placing each element in its correct position in a single pass.",
+};

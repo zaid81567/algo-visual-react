@@ -153,3 +153,14 @@ int main() {
   return 0;
 }`
 }
+
+
+
+// INSERTION SORT DATA
+export const insertionSortData = {
+  spaceComplexityBest: "O(1)",
+  spaceComplexityWorst: "O(1)",
+  timeComplexityBest: "O(n)",
+  timeComplexityWorst: "O(n^2)",
+  description: "Insertion Sort is a simple sorting algorithm that builds a sorted array one element at a time. It is efficient for small data sets and works well with partially sorted arrays. The algorithm iterates through the array, taking one element at a time and inserting it into its correct position in the already sorted part of the array.",
+};

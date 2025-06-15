@@ -137,3 +137,13 @@ int main() {
   return 0;
 }`
 }
+
+
+// ALGO DATA
+export const reverseArrayUsingOnePointerData = {
+  spaceComplexityBest: "O(n)",
+  spaceComplexityWorst: "O(n)",
+  timeComplexityBest: "O(n)",
+  timeComplexityWorst: "O(n)",
+  description: "Reversing an array using one pointer involves iterating through the array and filling a new array with elements from the end of the original array. This method is straightforward and efficient for reversing arrays.",
+};

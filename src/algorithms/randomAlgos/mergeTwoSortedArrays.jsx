@@ -214,3 +214,14 @@ int main() {
   return 0;
 }`
 }
+
+
+// ALGO DATA
+
+export const mergeTwoSortedArraysData = {
+  spaceComplexityBest: "O(n)",
+  spaceComplexityWorst: "O(n)",
+  timeComplexityBest: "O(n)",
+  timeComplexityWorst: "O(n)",
+  description: "Merge Two Sorted Arrays is an algorithm that combines two sorted arrays into a single sorted array. It iterates through both arrays, comparing their elements and adding the smaller one to the merged array until all elements from both arrays are processed. This algorithm is efficient for merging sorted data and is often used in sorting algorithms like Merge Sort.",
+};

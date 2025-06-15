@@ -83,7 +83,7 @@ export const combSortDraw = (p5) => {
 };
 
 // CODE SNIPPET
-export const combSortCodeSnippet = {
+export const combSortCode = {
   python: `# Comb Sort
 arr = [5, 2, 9, 1, 5, 6, 7, 8, 0, 3, 4, 11, 13, 12, 10]
 shrink_factor = 1.3
@@ -155,3 +155,16 @@ int main() {
   return 0;
 }`
 }
+
+
+
+
+
+// COMB SORT DATA
+export const combSortData = {
+  spaceComplexityBest: "O(1)",
+  spaceComplexityWorst: "O(1)",
+  timeComplexityBest: "O(n log n)",
+  timeComplexityWorst: "O(n^2)",
+  description: "Comb Sort is an improvement over Bubble Sort. It eliminates small values near the end of the list, which are not moved by Bubble Sort. It uses a gap sequence to compare elements that are far apart, gradually reducing the gap until it becomes 1, at which point it behaves like a Bubble Sort.",
+};

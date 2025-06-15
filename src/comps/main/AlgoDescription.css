@@ -1,0 +1,70 @@
+.algo-data-container{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.time-comp-container .header {
+    border-left: 1px solid gray;
+}
+
+.algo-data-container .header {
+    font-size: 14px;
+
+}
+
+.space-comp-container, .time-comp-container {
+    width: 50%;
+}
+
+/* ############################## */
+
+
+/* ################################## */
+
+.space-comp, .time-comp{
+    display: flex;
+    flex-direction: row;
+}
+
+.space-comp{
+    border-right: 1px solid gray;
+    border-bottom: 1px solid gray;
+}
+
+.time-comp{
+    border-bottom: 1px solid gray;
+}
+
+.space-comp div, .time-comp div {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.space-comp div:first-child, .time-comp div:first-child {
+    border-right: 1px solid gray;
+}
+
+/* ############################################# */
+
+.space-comp-best, .time-comp-best {
+    background-color: rgba(128, 255, 0, 0.1);
+    /* font-weight: bold; */
+}
+
+.space-comp-worst, .time-comp-worst {
+    background-color: rgba(255, 0, 0, 0.1);
+    /* font-weight: bold; */
+}
+
+.space-comp-best, .time-comp-best, .space-comp-worst, .time-comp-worst{
+    font-size: 10px;
+}
+/* ################################################ */
+
+.description-container {
+    padding: 10px;
+}

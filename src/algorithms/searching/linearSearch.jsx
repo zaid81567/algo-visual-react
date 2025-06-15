@@ -58,6 +58,7 @@ export const linearSearchDraw = (p5) => {
   }
 };
 
+// CODE SNIPPET 
 export const linearSearchCode = {
   python: `
 def linear_search(arr, target):
@@ -116,3 +117,11 @@ int main() {
 `.trim()
 };
 
+// ALGORITHM DATA
+export const linearSearchData = {
+  spaceComplexityBest: "O(1)",
+  spaceComplexityWorst: "O(1)",
+  timeComplexityBest: "O(1)",
+  timeComplexityWorst: "O(n)",
+  description: "Linear Search is the simplest search algorithm. It checks each element in the list one by one until the target element is found or the end of the list is reached. It is useful for small or unsorted arrays where implementing more complex algorithms is unnecessary.",
+};

@@ -74,7 +74,7 @@ export const interpolationSearchDraw = (p5) => {
 
 
 // CODE SNIPPET
-export const interpolationSearchCodeSnippet = {
+export const interpolationSearchCode = {
   python: `# Interpolation Search
 arr = sorted([3, 7, 9, 12, 17, 19, 23, 26, 31, 34, 38, 42, 47, 50, 55])
 target = 26
@@ -145,3 +145,12 @@ int main() {
   return 0;
 }`
 }
+
+// ALGO DATA
+export const interpolationSearchData = {
+  spaceComplexityBest: "O(1)",
+  spaceComplexityWorst: "O(1)",
+  timeComplexityBest: "O(1)",
+  timeComplexityWorst: "O(log log n)",
+  description: "Interpolation Search is an improved version of Binary Search for uniformly distributed sorted arrays. It estimates the position of the target value based on the values at the low and high indices, making it more efficient than Binary Search in certain cases.",
+};

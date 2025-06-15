@@ -147,3 +147,12 @@ int main() {
   return 0;
 }`
 }
+
+// SELECTION SORT DATA
+export const selectionSortData = {
+  spaceComplexityBest: "O(1)",
+  spaceComplexityWorst: "O(1)",
+  timeComplexityBest: "O(n^2)",
+  timeComplexityWorst: "O(n^2)",
+  description: "Selection Sort is a simple sorting algorithm that divides the input list into two parts: a sorted and an unsorted part. It repeatedly selects the smallest (or largest) element from the unsorted part and moves it to the end of the sorted part. It is not suitable for large datasets as its average and worst-case time complexity is quite high.",
+};
