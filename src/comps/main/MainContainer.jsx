@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './MainContainer.css'
 import P5Wrapper from '../P5Wrapper'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
-import { dark } from 'react-syntax-highlighter/dist/esm/styles/prism'
+import { dracula } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { monokai } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
 // import { linearSearchSetup, linearSearchDraw } from '../../algorithms/searching/linearSearch'
 // import { bubbleSortSetup, bubbleSortDraw } from '../../algorithms/sorting/bubbleSort'
@@ -10,6 +11,11 @@ import { ALGORITHMS } from '../../algorithms/algorithmsRegistry'
 
 function MainContainer({selectedAlgo}) {
   const algo = ALGORITHMS[selectedAlgo]
+  const [selectedLanguage, setSelectedLanguage] = useState('javascript');
+  const handleSelectLanguage = (event) => {
+    setSelectedLanguage(event.target.value);
+  };
+
   const codeString = '(num) => num + 1';  // for code block
 
   return (
@@ -37,31 +43,35 @@ function MainContainer({selectedAlgo}) {
           </div>
 
           <div className="main-right">
-              <div className="header">Code</div>
+              <div className="main-right-header-container">
+                <div className="header">Code</div>
+                <select 
+                  name="selectedLanguage" 
+                  id="selectedLanguage"
+                  value={selectedLanguage}
+                  onChange={handleSelectLanguage}
+                >
+                  <option value="javascript">JavaScript</option>
+                  <option value="python">Python</option>
+                  <option value="c">C</option>
+                </select>
+              </div>
               <div className="code">
                 <SyntaxHighlighter 
-                  language="python" 
-                  style={vscDarkPlus} 
+                  language={selectedLanguage} 
+                  style={monokai} 
                   showLineNumbers={true}
                   wrapLines={true}
                   wrapLongLines={true}
-                  lineProps={lineNumber => ({
-                    style: { width: '100%', display: 'block', padding: '0.2rem 0.5rem', backgroundColor: '#1e1e1e' }
-                  })}
-                  customStyle={{
-                    width: '100%',
-                    maxWidth: '100%',
-                    boxSizing: 'border-box',
-                    backgroundColor: '#000',
-                    color: '#eee',
-                    borderRadius: '8px',
-                    padding: '1rem',
-                    overflowX: 'auto',
-                    whiteSpace: 'pre-wrap', // wraps long lines
-                    wordBreak: 'break-word'
+                  customStyle={{ 
+                    backgroundColor: "black", 
+                    borderRadius: '8px', 
+                    padding: '20px', 
+                    fontSize: '14px',
+                    height: '100%',
                   }}
                   >
-                  {algo.code.python}
+                  {algo.code[selectedLanguage]}
                 </SyntaxHighlighter>
               </div>
           </div>
